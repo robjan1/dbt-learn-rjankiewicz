@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+    - name: orders
+      description: Testing orders model.
+      columns:
+        - name: order_id
+          tests:
+            - unique
+            - not_null
+    - name: payment
+      description: one row per customer id
+      columns:
+        - name: customer_id
+          tests:
+            - unique
+            - not_null
+
